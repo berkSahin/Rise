@@ -1,0 +1,175 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/GetContacts",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contact",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Contact/GetContacts"
+    },
+    {
+      "UpstreamPathTemplate": "/api/GetContact/{contactId}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contact",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Contact/GetContact/{contactId}"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/GetContactWithInfos/{contactId}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contact",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Contact/GetContactWithInfos/{contactId}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/AddContact",
+      "UpstreamHttpMethod": [ "Post" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contact",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Contact/AddContact"
+    },
+    {
+      "UpstreamPathTemplate": "/api/DeleteContact/{contactId}",
+      "UpstreamHttpMethod": [ "Delete" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contact",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Contact/DeleteContact/{contactId}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/GetContactInfoTypes",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contact",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Contact/GetContactInfoTypes"
+    },
+    {
+      "UpstreamPathTemplate": "/api/GetContactInfosByContactId/{contactId}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contact",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Contact/GetContactInfosByContactId/{contactId}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/AddContactInfo",
+      "UpstreamHttpMethod": [ "Post" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contact",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Contact/AddContactInfo"
+    },
+    {
+      "UpstreamPathTemplate": "/api/DeleteContactInfo/{contactInfoId}",
+      "UpstreamHttpMethod": [ "Delete" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contact",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Contact/DeleteContactInfo/{contactInfoId}"
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/CreateReport",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "report",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Report/CreateReport"
+    },
+    {
+      "UpstreamPathTemplate": "/api/GetReportDetail/{reportId}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "report",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Report/GetReportDetail/{reportId}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/GetReports",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "report",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Report/GetReports"
+    },
+    {
+      "UpstreamPathTemplate": "/api/DownloadReport/{path}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "report",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/Report/DownloadReport/{path}"
+    }
+  ]
+}

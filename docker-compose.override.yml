@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8001:80"
+    networks:
+      - backend
+  contact:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - backend
+
+  report:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - backend

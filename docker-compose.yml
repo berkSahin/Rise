@@ -1,0 +1,78 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+  apigateway:
+    container_name: ApiGateway
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: src/ApiGateway/Dockerfile
+  contact:
+    container_name: ContactService
+    image: ${DOCKER_REGISTRY-}contactservice
+    build:
+      context: .
+      dockerfile: src/Services/ContactService/Dockerfile
+    depends_on:
+      - contactdb
+    links: 
+      - contactdb
+  contactdb:
+    container_name: Contact-DB
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+      - APP_DB_USER=docker
+      - APP_DB_PASS=docker
+      - APP_DB_NAME=docker
+    ports:
+      - 5432:5432
+    networks:
+      - backend  
+  report:
+    container_name: ReportService
+    image: ${DOCKER_REGISTRY-}reportservice
+    build:
+      context: .
+      dockerfile: src/Services/ReportService/Dockerfile
+    volumes:
+      - reports:/app/reports 
+    depends_on:
+      - reportdb
+      - rabbitmq
+    links: 
+      - reportdb
+      - rabbitmq
+  reportdb:
+    container_name: Report-DB
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+      - APP_DB_USER=docker
+      - APP_DB_PASS=docker
+      - APP_DB_NAME=docker
+    ports:
+      - 5431:5432
+    networks:
+      - backend
+  rabbitmq:
+    container_name: RabbitMQ
+    image: rabbitmq:3-management
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - backend
+
+volumes:
+  reports:

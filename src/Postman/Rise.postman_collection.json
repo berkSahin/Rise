@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "6e593c0e-dd5b-4357-af60-32bd5977f0f0",
+		"name": "Rise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ApiGateway",
+			"item": [
+				{
+					"name": "ContactInfo",
+					"item": [
+						{
+							"name": "GetContactInfoTypes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/api/GetContactInfoTypes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"GetContactInfoTypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetContactInfosByContactId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/api/GetContactInfosByContactId/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"GetContactInfosByContactId",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddContactInfo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ContactId\": 1,\r\n    \"ContactInfoTypeId\": 1,\r\n    \"Value\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/api/AddContactInfo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"AddContactInfo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteContactInfo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/api/DeleteContactInfo/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"DeleteContactInfo",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Contact",
+					"item": [
+						{
+							"name": "GetContacts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/api/GetContacts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"GetContacts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetContact",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/api/GetContact/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"GetContact",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddContact",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"Sample\",\r\n    \"Surname\": \"sample\",\r\n    \"Company\": \"purple\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/api/AddContact",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"AddContact"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteContact",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/api/DeleteContact/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"DeleteContact",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetContactWithInfos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/api/GetContactWithInfos/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"GetContactWithInfos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Report",
+					"item": [
+						{
+							"name": "CreateReport",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/api/CreateReport",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"CreateReport"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetReports",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/api/GetReports",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"GetReports"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetReportDetail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/api/GetReportDetail/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"GetReportDetail",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DownloadReport",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/api/DownloadReport/1.csv",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"DownloadReport",
+										"1.csv"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
